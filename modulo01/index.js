@@ -6,9 +6,9 @@ const server = express()
 //Request body = {"name": "Farley Rufino", "e-mail": "farley.t.i@hotmail.com"}
 
 
-server.get('/teste',(req,res) =>{
-    const nome = req.query.nome
-    return res.json({msg:`Hello ${nome}`})
+server.get('/users/:id',(req,res) =>{
+    const id = req.params.id
+    return res.json({msg:`Buscando o Id ${id}`})
 })
 
 server.listen(3000,function(){
