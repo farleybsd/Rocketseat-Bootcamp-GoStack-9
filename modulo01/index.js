@@ -7,7 +7,7 @@ const server = express()
 
 
 server.get('/users/:id',(req,res) =>{
-    const id = req.params.id
+    const {id} = req.params
     return res.json({msg:`Buscando o Id ${id}`})
 })
 
