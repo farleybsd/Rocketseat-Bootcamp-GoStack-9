@@ -1,2 +1,9 @@
 1 Instalando o Express
 yarn add express
+
+2 Instalando NodeMon
+yarn add nodemon
+scripts": {
+    "dev": "nodemon index.js"
+  },
+  yarn dev
