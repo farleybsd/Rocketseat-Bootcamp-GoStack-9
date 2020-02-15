@@ -1,19 +1,4 @@
-1 Instalando o Express
-yarn add express
-
-2 Instalando NodeMon
-yarn add nodemon
-scripts": {
-    "dev": "nodemon index.js"
-  },
-  yarn dev
-
-3 debug
-
-3.1 server desligado Express
-
-3.2
-  {
+{
     // Use IntelliSense to learn about possible attributes.
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
