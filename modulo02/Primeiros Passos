@@ -1,0 +1,8 @@
+Inciando o Projeto 
+yarn init -y
+
+Instalando Express
+yarn add express
+
+Testando Express
+node src/server.js
