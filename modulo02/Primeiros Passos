@@ -6,3 +6,46 @@ yarn add express
 
 Testando Express
 node src/server.js
+
+Adicionando novos formatos ao node (import)
+yarn add sucrase nodemon -D
+
+Rodando aplicacao pelo sucrase
+yarn sucrase-node src/server.js
+
+Nodemon = sucrase 
+
+package.json
+"scripts": {
+    "dev": "nodemon src/server.js"
+  },
+
+nodemon.json 
+{
+    "execMap":{
+        "js":"node -r sucrase/register"
+    }
+}
+
+yarn dev
+
+debug
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "Launch Program",
+            "restart": true,
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+           "protocol": "inspector"
+        }
+    ]
+}
+yarn dev:debug
