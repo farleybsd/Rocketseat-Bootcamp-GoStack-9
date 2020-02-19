@@ -1,0 +1,23 @@
+Verificando a versao do Docker
+docker -v
+
+Verificando se esta funcionando
+docker help
+
+Instalando Postgress
+docker run --name  database -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
+
+listando os container 
+docker ps
+
+parando docker
+docker stop database
+
+listando containers
+docker ps -a
+
+Iniciando o docker
+docker start database
+
+docker log
+docker logs database
