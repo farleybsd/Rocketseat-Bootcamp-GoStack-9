@@ -1,0 +1,44 @@
+ Padronizando o codigo
+ yarn add eslint
+
+ Iniciando o eslint
+ yarn eslint --init
+
+ - To check syntax, find problems, and enforce code style 
+
+ -> JavaScript modules (import/export)
+
+ - None of these 
+
+ ? Does your project use TypeScript? (y/N) n
+
+ ? Where does your code run? 
+ ( ) Browser
+>(*) Node
+
+> Use a popular style guide
+
+? Which style guide do you want to follow? (Use arrow keys)
+
+> Airbnb: https://github.com/airbnb/javascript
+
+? What format do you want your config file to be in? (Use arrow keys)
+
+> JavaScript
+
+eslint-config-airbnb-base@latest eslint@^5.16.0 || ^6.1.0 eslint-plugin-import@^2.18.2
+? Would you like to install them now with npm? (Y/n) y
+
+Remover 
+package-lock.json
+
+Depois -> yarn
+
+Adicionar extenção do eslint no vscode 
+
+
+-- Deixando o codigo mais belo
+yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
+
+Corringo o formato automatico 
+yarn eslint --fix src --ext .js

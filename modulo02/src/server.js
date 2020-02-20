@@ -1,5 +1,5 @@
-import app  from './app'
+import app from './app';
 
-app.listen(3333,()=>{
-    console.log('Servidor Rodando pode ir toma café :-)')
-})
+app.listen(3333, () => {
+    console.log('Servidor Rodando pode ir toma café :-)');
+});
