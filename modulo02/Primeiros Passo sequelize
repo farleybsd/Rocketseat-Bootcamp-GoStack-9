@@ -1,0 +1,7 @@
+Instalando sequelize
+yarn add sequelize
+yarn add sequelize-cli - D
+
+Instalando pacotes para comunicacao com postgress 
+
+yarn add pg pg-hstore
