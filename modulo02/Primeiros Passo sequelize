@@ -1,7 +1,19 @@
 Instalando sequelize
 yarn add sequelize
-yarn add sequelize-cli - D
+yarn add sequelize-cli
 
 Instalando pacotes para comunicacao com postgress 
 
 yarn add pg pg-hstore
+
+Criando primeira migration 
+yarn sequelize migration:create --name=create-users
+
+rodando uma migration
+yarn sequelize db:migrate
+
+Desfazendo ultima migration 
+yarn sequelize db:migrate:undo
+
+Desfazendo Todas migrate
+yarn sequelize db:migrate:undo:all
