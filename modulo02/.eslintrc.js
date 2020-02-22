@@ -24,7 +24,8 @@ module.exports = {
     "no-unused-vars": ["error", { "argsIgnorePattern": "next" }],
     "linebreak-style": 0,
     "no-console": "off",
-    "indent": [2, 4]
+
+
 
 
   },
