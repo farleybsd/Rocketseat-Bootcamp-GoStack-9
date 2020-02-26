@@ -23,7 +23,6 @@ SqliteDialect.prototype.supports = _.merge(_.cloneDeep(AbstractDialect.prototype
   'DEFAULT': false,
   'DEFAULT VALUES': true,
   'UNION ALL': false,
-  'RIGHT JOIN': false,
   inserts: {
     ignoreDuplicates: ' OR IGNORE',
     updateOnDuplicate: ' ON CONFLICT DO UPDATE SET'

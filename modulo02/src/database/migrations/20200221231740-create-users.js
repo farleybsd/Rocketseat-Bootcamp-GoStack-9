@@ -21,7 +21,7 @@ module.exports = {
         unique: true,
 
       },
-      passqord_hash: {
+      password_hash: {
         type: Sequelize.STRING,
         allownull: false
       },
@@ -32,11 +32,11 @@ module.exports = {
       },
       created_at: {
         type: Sequelize.DATE,
-        allownull: false
+        allowNull: false
       },
-      update_at: {
+      updated_at: {
         type: Sequelize.DATE,
-        allownull: false
+        allowNull: false
       }
     });
 
