@@ -8,6 +8,7 @@ import authMiddleware from './app/middleware/auth'
 import FileController from './app/controllers/FileController';
 import ProviderController from './app/controllers/ProviderController';
 import AppointmentController from './app/controllers/AppointmentController'
+import Appointment from './app/models/Appointment';
 
 const routes = new Router();
 const upload = multer(multerconfig)
@@ -21,6 +22,8 @@ routes.use(authMiddleware);
 routes.put('/users', UserController.update)
 
 routes.get('/providers', ProviderController.index)
+
+routes.get('/Appointment', AppointmentController.index)
 
 routes.post('/Appointment', AppointmentController.store)
 
