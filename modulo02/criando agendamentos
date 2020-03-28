@@ -1,0 +1,124 @@
+yarn sequelize migration:create --name=create-appointments
+
+
+
+module.exports = {
+  up: (queryInterface, Sequelize) => {
+
+    return queryInterface.createTable('appointments', {
+      id: {
+        type: Sequelize.INTEGER,
+        allownull: false,
+        autoIncrement: true,
+        primaryKey: true
+      },
+
+      date: {
+        allownull: false,
+        type: Sequelize.DATE
+      },
+      user_id: {
+        references: { model: 'users', Key: 'id' },
+        onUpdate: 'CASCADE',
+        onDelete: 'SET NULL',
+        allowNull: true
+      },
+      provider_id: {
+        references: { model: 'users', Key: 'id' },
+        onUpdate: 'CASCADE',
+        onDelete: 'SET NULL',
+        allowNull: true
+      },
+      canceled_at: {
+        type: Sequelize.DATE,
+        allownull: true
+      },
+
+      created_at: {
+        type: Sequelize.DATE,
+        allowNull: false
+      },
+      updated_at: {
+        type: Sequelize.DATE,
+        allowNull: false
+      }
+    });
+
+  },
+
+  down: queryInterface => {
+
+    return queryInterface.dropTable('appointments');
+
+  }
+};
+
+
+
+yarn sequelize db:migrate
+
+
+models 
+import Sequelize, { Model } from 'sequelize'
+
+
+class Appointment extends Model {
+
+    static init(sequelize) {
+        super.init({
+            date: Sequelize.DATE,
+            canceled_at: Sequelize.DATE,
+
+        },
+            {
+                sequelize
+            }
+        )
+        return this;
+    }
+
+    static associate(models) {
+        this.belongsTo(models.User, { foreignKey: 'user_id', as: 'user' })
+        this.belongsTo(models.User, { foreignKey: 'provider_id', as: 'provider' })
+    }
+
+
+}
+
+export default Appointment
+
+database 
+
+index
+
+import Sequelize from 'sequelize';
+import User from '../app/models/User'
+import File from '../app/models/File'
+import Appointment from '../app/models/Appointment'
+import DatabaseConfig from '../config/database'
+
+
+const models = [User, File, Appointment]
+
+class Database {
+    constructor() {
+        this.init();
+    }
+
+    init() {
+        this.connection = new Sequelize(DatabaseConfig);
+        models
+            .map(model => model.init(this.connection))
+            .map(model => model.associate && model.associate(this.connection.models));
+    }
+}
+
+export default new Database()
+
+-- controller
+
+
+
+-- routes
+
+routes.post('/Appointment',AppointmentController.store)
