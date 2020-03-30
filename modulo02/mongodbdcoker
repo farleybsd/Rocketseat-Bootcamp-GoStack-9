@@ -1,0 +1,6 @@
+Insatalando um novo cluster 
+
+docker run --name mongobarber -p 27017:27017 -d -t mongo
+
+instalando o driver de conexao com mongo
+yarn add mongoose 
