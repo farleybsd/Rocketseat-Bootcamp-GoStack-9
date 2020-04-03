@@ -38,9 +38,15 @@ class Queue {
 
             const { bee, handle } = this.queues[job.Key]
 
-            bee.process(handle)
+            bee.on('failed', this.handleFailure).process(handle)
 
         })
+
+    }
+
+    handleFailure(job, erro) {
+
+        console.log(`Queue ${job.queue.name}: FAILED`, erro)
 
     }
 
