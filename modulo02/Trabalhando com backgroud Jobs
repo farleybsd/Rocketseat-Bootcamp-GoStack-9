@@ -1,0 +1,9 @@
+Instalando Banco de dados redis
+docker run --name redisbarber -p 6379:6379 -d -t redis:alpine
+docker logs redisbarber
+
+Instalando Bee queue
+yarn add bee-queue
+
+rodando a queue
+yarn queue
