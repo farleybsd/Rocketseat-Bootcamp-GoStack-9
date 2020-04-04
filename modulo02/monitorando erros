@@ -1,0 +1,18 @@
+Sentry
+https://sentry.io/organizations/me-n0/issues/?project=1516074
+
+
+Create project 
+
+selecionar express ou node  selecionar nome -> create project 
+
+instalar
+yarn add @sentry/node@5.15.4
+
+lib para express coletar erros async
+yarn add express-async-errors
+
+
+erros gerais do express
+
+yarn add youch
