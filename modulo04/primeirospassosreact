@@ -1,0 +1,7 @@
+Creacte package.json
+    yarn init -y 
+
+instalando libs
+
+yarn add @babel/core @babel/preset-env @babel/preset-react webpack webpack-cli
+
