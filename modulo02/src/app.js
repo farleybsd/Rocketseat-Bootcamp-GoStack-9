@@ -1,4 +1,4 @@
-
+import 'dotenv/config'
 import express from "express";
 import path from 'path'
 import Youch from 'youch'
@@ -31,9 +31,14 @@ class App {
     exceptionHandler() {
         this.sever.use(async (err, req, res, next) => {
 
-            const erros = await new Youch(err, req).toJSON()
+            if (process.env.NODE_ENV === 'development') {
 
-            return res.status(500).json(erros)
+                const erros = await new Youch(err, req).toJSON()
+
+                return res.status(500).json(erros)
+            }
+
+            return res.status(500).json({ error: ' Internal Sever Error' })
 
         })
     }

@@ -1,0 +1,3 @@
+Criar um arquivo .env
+
+yarn add dotenv 
