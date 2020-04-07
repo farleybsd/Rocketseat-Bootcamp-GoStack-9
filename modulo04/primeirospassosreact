@@ -5,3 +5,24 @@ instalando libs
 
 yarn add @babel/core @babel/preset-env @babel/preset-react webpack webpack-cli
 
+yarn add react react-dom 
+
+configurar o babel 
+
+yarn add babel-loader -D
+
+testar
+
+src 
+const soma = (a, b) => a + b
+alert(soma(1, 3))
+
+yarn build 
+
+
+fazenro auto reload 
+
+yarn add webpack-dev-server -D
+
+depois instalando
+yarn dev
