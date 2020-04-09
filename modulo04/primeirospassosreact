@@ -30,3 +30,6 @@ yarn dev
 
 fazendo load css babel
 yarn add  style-loader css-loader -D
+
+fazendo loader imagem css babel
+yarn add file-loader -D
