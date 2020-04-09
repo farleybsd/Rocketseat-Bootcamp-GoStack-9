@@ -1,8 +1,8 @@
 import React from 'react'
 import './App.css'
-import Profile from './assets/Perfil.png'
+import TechList from './components/TechList'
 function App() {
-    return < img width="400" src={Profile} />
+    return < TechList />
 }
 
 export default App

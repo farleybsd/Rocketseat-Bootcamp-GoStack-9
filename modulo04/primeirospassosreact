@@ -33,3 +33,7 @@ yarn add  style-loader css-loader -D
 
 fazendo loader imagem css babel
 yarn add file-loader -D
+
+class com babel
+
+yarn add @babel/plugin-proposal-class-properties -D
