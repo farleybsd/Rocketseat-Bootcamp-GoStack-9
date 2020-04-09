@@ -4,14 +4,37 @@ class TechList extends Component {
 
     state = {
         newTech: '',
-        techs: [
-            'Node.js',
-            'React.js',
-            'React Native',
-            'C#',
-            'Sql'
-        ]
+        techs: []
     }
+
+    // Ciclo de Vida
+    // Execultado assim que o componente aparare na tela  consumundo api
+    componentDidMount() {
+
+        const techs = localStorage.getItem('techs')
+
+        if (techs) {
+            this.setState({ techs: JSON.parse(techs) })
+        }
+
+    }
+
+    // Execultado sempre que houver alteração nas props pu estados
+    componentDidUpdate(prevProps, prevSate) {
+        // this.props,this.state
+
+        if (prevSate !== this.setState.techs) {
+            localStorage.setItem('techs', JSON.stringify(this.state.techs))
+        }
+
+
+    }
+
+    // Execultado quando o component deixa de existir
+    componentWillMount() {
+
+    }
+
 
     handleInputChange = e => {
 
@@ -26,6 +49,7 @@ class TechList extends Component {
             techs: [...this.state.techs, this.state.newTech],
             newTech: ''
         })
+
 
     }
 
