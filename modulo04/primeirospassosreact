@@ -26,3 +26,7 @@ yarn add webpack-dev-server -D
 
 depois instalando
 yarn dev
+
+
+fazendo load css babel
+yarn add  style-loader css-loader -D
