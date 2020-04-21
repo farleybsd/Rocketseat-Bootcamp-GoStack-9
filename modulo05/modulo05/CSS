@@ -1,3 +1,7 @@
 yarn add styled-components
 
 instalar extensao vscode-styled-components no vscode
+
+Usanado lib de icones
+
+yarn add react-icons
