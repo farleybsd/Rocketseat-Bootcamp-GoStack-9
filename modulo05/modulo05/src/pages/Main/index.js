@@ -26,11 +26,11 @@ export default class Main extends Component {
     // Salvar dos Dados no localStorage
     componentDidUpdate(_, prevState) {
 
-        const repositories = this.state;
+        //const repositories = this.state;
 
-        if (prevState.repositories !== repositories) {
+        if (prevState.repositories !== this.state.repositories) {
 
-            localStorage.setItem('repositories', JSON.stringify(repositories));
+            localStorage.setItem('repositories', JSON.stringify(this.state.repositories));
 
         }
 
