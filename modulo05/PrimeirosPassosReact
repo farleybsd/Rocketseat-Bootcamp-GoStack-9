@@ -2,3 +2,21 @@ yarn create react-app modulo05
 
 execultar aplicacao 
 yarn start
+
+
+Editor Config
+
+ESLINT
+yarn add eslint -D
+
+yarn eslint --init 
+
+> To check syntax, find problems, and enforce code style 
+> JavaScript modules (import/export)
+> React
+>(*) Browser
+> Use a popular style guide
+> Airbnb: https://github.com/airbnb/javascript
+> JavaScript
+
+yarn add prettier eslint-config-prettier eslint-plugins-prettier babel-eslint -D
