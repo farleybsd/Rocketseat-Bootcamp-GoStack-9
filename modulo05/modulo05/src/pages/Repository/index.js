@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import api from '../../services/api'
+
+import Container from '../../components/Container'
+import { Loading, Ownver } from './styles'
 export default class Repository extends Component {
 
     static propTypes = {
@@ -50,7 +54,23 @@ export default class Repository extends Component {
 
         const { repository, issues, loading } = this.state;
 
-        return <h1>Repository </h1>
+        if (loading) {
+
+            return <Loading>Carregando</Loading>
+        }
+
+        return (
+
+            <Container>
+                <Ownver>
+                    <Link to="/">Voltar aos repositórios </Link>
+                    <img src={repository.owner.avatar_url} alt={repository.owner.login}></img>
+                    <h1>{repository.name}</h1>
+                    <p>{repository.description}</p>
+                </Ownver>
+            </Container>
+
+        )
 
     }
 }
