@@ -1,1 +1,4 @@
 yarn add redux react-redux
+
+Instalando o redux Saga middleware para fazer conexao com api banco de dados etc
+yarn add redux-saga
