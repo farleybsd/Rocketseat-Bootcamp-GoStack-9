@@ -1,6 +1,7 @@
 // funcão com asteristo e funcao com async await
 // SAGA VAI COMSUMIR A API DEPOIS ENVIAR PARA O REDUCER
 import { call, select, put, all, takeLatest } from 'redux-saga/effects'
+import { toast } from 'react-toastify'
 import api from '../../../services/api'
 import { formatPrice } from '../../../util/format'
 import { addToCartSuccess, updateAmount } from './actions'
@@ -21,6 +22,7 @@ function* addToCart({ id }) {
     if (amount > stockAmount) {
 
         console.tron.warn('ERRO');
+        toast.error('Quantidade Solicitada Fora do Estoque!')
         return
 
     }
