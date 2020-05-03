@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 
 
 function App() {
@@ -28,6 +28,8 @@ function App() {
 
   }, [tech])
 
+  const techsize = useMemo(() => tech.length, [tech])
+
   return (
     <>
       <uL>
@@ -36,6 +38,7 @@ function App() {
         ))}
 
       </uL>
+      <strong>Voçê tem {techsize} tecnologias</strong><br />
       <input value={newtech} onChange={e => setnewtech(e.target.value)} />
       <button type="button" onClick={handleAdd}>Adicionar</button>
 
