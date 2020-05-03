@@ -1,13 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 
 function App() {
 
-  const [tech, setTech] = useState([
-    'ReactJs',
-    'React Native',
-    'Mongo Db'
-  ])
+  const [tech, setTech] = useState([])
 
   const [newtech, setnewtech] = useState('')
 
@@ -16,6 +12,21 @@ function App() {
     setnewtech('')
   }
 
+  useEffect(() => {
+    const storagetech = localStorage.getItem('tech')
+    if (storagetech) {
+      setTech(JSON.parse(storagetech))
+    }
+
+
+
+  }, [])
+
+  useEffect(() => {
+
+    localStorage.setItem('tech', JSON.stringify(tech))
+
+  }, [tech])
 
   return (
     <>
