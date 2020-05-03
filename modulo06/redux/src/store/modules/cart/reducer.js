@@ -22,20 +22,13 @@ export default function cart(state = [], action) {
 
             })
 
-        case '@cart/Update_AMOUNT': {
-
-            if (action.amount <= 0) {
-                return state;
-            }
-
+        case '@cart/UPDATE_AMOUNT_SUCCESS': {
             return produce(state, draft => {
-
-                const productIndex = draft.findIndex(p => p.id === action.id)
+                const productIndex = draft.findIndex(p => p.id === action.id);
                 if (productIndex >= 0) {
-                    draft[productIndex].amount = Number(action.amount)
+                    draft[productIndex].amount = Number(action.amount);
                 }
-
-            })
+            });
         }
         default:
             return state;
