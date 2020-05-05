@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "-": "^0.0.1",
+    "D": "^1.0.0",
+    "jest": "^26.0.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@sucrase/jest-plugin": "^2.0.0",
+    "@types/jest": "^25.2.1"
+  }
+}

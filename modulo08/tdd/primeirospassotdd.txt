@@ -5,3 +5,37 @@ omni init modulo11 --only=server
 yarn dev
 
 yarn add pg
+
+yarn add jest - D
+
+yarn jest --init
+? Would you like to use Jest when running "test" script in "package.json"? » (Y/n) 
+y
+
+√ Would you like to use Jest when running "test" script in "package.json"? ... yes
+? Choose the test environment that will be used for testing » - Use arrow-keys. Return to submit.
+>   node
+    jsdom (browser-like)
+node
+The following questions will help Jest to create a suitable configuration for your project
+
+√ Would you like to use Jest when running "test" script in "package.json"? ... yes
+√ Choose the test environment that will be used for testing » node
+? Do you want Jest to add coverage reports? » (y/N)
+
+Y
+? Automatically clear mock calls and instances between every test? » (y/N)
+Y
+
+ultilizar import export 
+yarn add --dev @sucrase/jest-plugin
+
+
+testar tem q estar na pasta tdd
+
+yarn test
+
+
+instalando tipos para o jest
+yarn add -D @types/jest
+
